@@ -4,8 +4,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Browser Extension Manager</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        @font-face {
+        font-family: "Noto Sans";
+        src: url("./fonts/NotoSans-VariableFont_wdth,wght.ttf") format("truetype");
+        }
+
+
+        body{
+           background-image: linear-gradient(180deg, #040918 0%, #091540 100%);
+           min-height: 100vh;
+           font-family: "Noto Sans";
+        }
+
+        .main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        .section1{
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 10px;
+            padding: 10px 15px;
+            background-color: hsl(226, 25%, 17%);
+        }
+
+        #logo{
+            height: 30px;
+            color: #fff;
+        }
+
+        #icon-sun{
+            height: 30px;
+        }
+
+
+        .section3{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            width: 80%;
+        }
+
+        .devlens{
+            border-radius: 10px;
+            padding: 10px;
+            background-color: hsl(226, 25%, 17%);
+        }
+
+        .logo-des{
+             display: flex;
+             gap: 10px;
+        }
+
+        .extName{
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .description{
+            font-size: 16px;
+        }
+
+        .devlens-logo{
+            height: 60px;
+        }
+
+        .functional{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        
+    </style>
 </head>
 <body>
-    
+    <main class="main">
+       <section class="section1">
+            <img src="images/logo.svg" alt="" srcset="" id="logo">
+            <img src="images/icon-sun.svg" alt="dark mode" id="icon-sun">
+       </section>
+
+       <section class="section2">
+        <p>Extensions List</p>
+        <div class="capsule">
+            <button>All</button>
+            <button>Active</button>
+            <button>Inactive</button>
+        </div>
+       </section>
+
+       <section class="section3">
+           <div class="devlens">
+            <div class="logo-des">
+            <img src="images/logo-devlens.svg" alt="dev lens" class="devlens-logo">
+            <div class="text">
+            <p class="extName">DevLens</p> 
+            <p class="description">Quickly inspect page layouts and visualize element boundaries.</p>
+            </div>
+            </div>
+             <div class="functional">
+                <button class="remove">Remove</button>
+                <button class="toggle">toggle</button>
+            </div>
+        </div>
+       </section>
+    </main>
 </body>
 </html>
