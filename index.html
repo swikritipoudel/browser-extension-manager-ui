@@ -63,6 +63,10 @@
             background-color: hsl(226, 25%, 17%);
         }
 
+        .devlens-logo{
+            height: 60px;
+        }
+
         .logo-des{
              display: flex;
              gap: 10px;
@@ -75,16 +79,43 @@
 
         .description{
             font-size: 16px;
+            color:hsl(0, 0%, 78%);
         }
 
-        .devlens-logo{
-            height: 60px;
-        }
+        
 
-        .functional{
+        .buttons{
             display: flex;
             justify-content: space-between;
             margin-top: 30px;
+            align-items: center;
+        }
+
+        .toggle{
+            height: 15px;
+            width: 30px;
+            border-radius: 15px;
+            background-color: rgba(243, 78, 44, 0.867);
+            cursor: pointer;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .circle{
+            height: 14px;
+            width: 14px;
+            border-radius: 60%;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        .remove{
+            font-family: inherit;
+            border-radius: 15px;
+            padding: 5px 7px;
+            background: transparent;
+            color: #fff;
         }
 
         
@@ -115,9 +146,13 @@
             <p class="description">Quickly inspect page layouts and visualize element boundaries.</p>
             </div>
             </div>
-             <div class="functional">
+             <div class="buttons">
                 <button class="remove">Remove</button>
-                <button class="toggle">toggle</button>
+                <div class="toggle">
+                    <div class="circle">
+
+                    </div>
+                </div>
             </div>
         </div>
        </section>
