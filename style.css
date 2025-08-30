@@ -1,0 +1,147 @@
+*{
+            margin: 0;
+            padding: 0;
+        }
+
+        @font-face {
+        font-family: "Noto Sans";
+        src: url("./fonts/NotoSans-VariableFont_wdth,wght.ttf") format("truetype");
+        }
+
+
+        body{
+           background-image: linear-gradient(180deg, #040918 0%, #091540 100%);
+           min-height: 100vh;
+           font-family: "Noto Sans";
+        }
+
+        .main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        .section1{
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 10px;
+            padding: 10px 15px;
+            background-color: hsl(226, 25%, 17%);
+        }
+
+        #logo{
+            height: 30px;
+            color: #fff;
+        }
+
+        #icon-sun{
+            height: 30px;
+        }
+
+
+        .section2{
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0 20px 0;
+        }
+
+        .capsules{
+            display: flex;
+            gap: 5px;
+        }
+
+        .capsules a{
+            border-radius: 15px;
+            font-family: inherit;
+            padding: 5px 10px;
+            background-color:  hsl(226, 25%, 17%);
+            border: none;
+            cursor: pointer;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .active{
+            background-color: rgb(239, 67, 67);
+            color: #000;
+        }
+
+
+        .section3{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            width: 80%;
+            gap: 10px;
+        }
+
+        .extension{
+            border-radius: 8px;
+            padding: 10px;
+            background-color: hsl(226, 25%, 17%);
+            border: 0.5px solid hsl(226, 11%, 37%);
+        }
+
+        .extension-logo{
+            height: 60px;
+        }
+
+        .logo-description{
+             display: flex;
+             gap: 10px;
+        }
+
+        .extName{
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .extDes{
+            font-size: 16px;
+            color:hsl(0, 0%, 78%);
+        }
+
+        
+
+        .buttons{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            align-items: center;
+        }
+
+        .toggle-on{
+            height: 15px;
+            width: 30px;
+            border-radius: 15px;
+            background-color: rgba(243, 78, 44, 0.867);
+            cursor: pointer;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            
+        }
+
+        .circle{
+            height: 14px;
+            width: 14px;
+            border-radius: 60%;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        
+
+        .remove{
+            font-family: inherit;
+            border-radius: 15px;
+            padding: 8px 10px;
+            background: transparent;
+            color: #fff;
+            cursor: pointer;
+            border: 0.5px solid hsl(226, 11%, 37%);
+        }
