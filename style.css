@@ -126,6 +126,17 @@
             
         }
 
+       .toggle-off{
+            height: 15px;
+            width: 30px;
+            border-radius: 15px;
+            background-color:hsl(226, 11%, 37%);
+            cursor: pointer;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+       }
+
         .circle{
             height: 14px;
             width: 14px;

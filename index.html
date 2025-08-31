@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Browser Extension Manager</title>
    <link rel="stylesheet" href="style.css">
+   <style>
+     #all{
+        background-color: red;
+     }
+   </style>
 </head>
 <body>
     <main class="main">
@@ -17,14 +22,14 @@
        <section class="section2">
         <h2>Extensions List</h2>
         <div class="capsules">
-            <a id="all">All</a>
-            <a id="active" href="active.html" target="_blank">Active</a>
+            <a id="all" href="#">All</a>
+            <a id="active" href="active.html">Active</a>
             <a id="inactive" href="inactive.html">Inactive</a>
         </div>
        </section>
 
        <section class="section3">
-           <div class="extension">
+           <!-- <div class="extension">
             <div class="logo-description">
             <img src="images/logo-devlens.svg" alt="dev lens" class="extension-logo">
             <div class="text">
@@ -34,21 +39,82 @@
             </div>
              <div class="buttons">
                 <button class="remove">Remove</button>
-                <div class="toggle-on">
+                <div>
                     <div class="circle">
 
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
     </main>
 
 <script>
+    let section3 = document.querySelector(".section3")
     async function getAll(){
         const res = await fetch("data.json")
         const data = await res.json()
+
+        data.forEach(element => {
+            let extension = document.createElement("div") 
+            extension.classList.add("extension")
+
+            let logoDescription = document.createElement("div")
+            logoDescription.classList.add("logo-description")
+
+            let extensionLogo = document.createElement("img")
+            extensionLogo.src = element.logo
+            extensionLogo.classList.add("extension-logo")
+
+            let text = document.createElement("div")
+            text.classList.add("text")
+
+            let extName = document.createElement("p")
+            extName.classList.add("extName")
+            extName.textContent = element.name
+
+            let extDes = document.createElement("p")
+            extDes.classList.add("extDes")
+            extDes.textContent = element.description
+
+            let buttons = document.createElement("div")
+            buttons.classList.add("buttons")
+
+            let remove = document.createElement("button")
+            remove.innerText = "Remove"
+            remove.classList.add("remove")
+
+            let toggle = document.createElement("div")
+            if(element.isActive===true){
+                toggle.classList.add("toggle-on")
+            }
+
+            else{
+                toggle.classList.add("toggle-off")
+            }
+
+            let circle = document.createElement("div")
+            circle.classList.add("circle")
+
+            section3.appendChild(extension)
+            extension.appendChild(logoDescription)
+            extension.appendChild(buttons)
+
+            logoDescription.appendChild(extensionLogo)
+            logoDescription.appendChild(text)
+
+            text.appendChild(extName)
+            text.appendChild(extDes)
+
+            buttons.appendChild(remove)
+            buttons.appendChild(toggle)
+
+            toggle.appendChild(circle)
+
+        });
     }
+
+    getAll()
 </script>
 
 </body>
