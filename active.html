@@ -8,7 +8,16 @@
    <style>
     #active{
         background-color: rgb(239, 67, 67);
+         color: black;
     }
+
+    #active:hover{
+        background-color: hsl(0, 84%, 70%)
+     }
+
+     #all:hover, #inactive:hover{
+        background-color: hsl(226, 25%, 27%);
+     }
    </style>
 </head>
 <body>
@@ -87,7 +96,6 @@
 
             let toggle = document.createElement("div")
             toggle.classList.add("toggle-on")
-           
 
             let circle = document.createElement("div")
             circle.classList.add("circle")
@@ -106,6 +114,11 @@
             buttons.appendChild(toggle)
 
             toggle.appendChild(circle)
+
+            toggle.addEventListener("click", ()=>{
+                element.isActive = false
+            })     
+
             }
         });
         
