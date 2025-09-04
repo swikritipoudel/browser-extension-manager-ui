@@ -12,13 +12,18 @@
         :root{
             --body-background: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
             --text-color: #000;
-            --section1: #fff;
+            --background-color: #fff;
+            --mode-image: url('images/icon-moon.svg');
+            --des-color: hsl(226, 11%, 37%);
+            
         }
 
         [data-theme="dark"]{
              --body-background: linear-gradient(180deg, #040918 0%, #091540 100%);
             --text-color: #fff;
-            --section1: hsl(226, 25%, 17%);
+            --background-color: hsl(226, 25%, 17%);
+            --mode-image: url('images/icon-sun.svg');
+            --des-color:hsl(0, 0%, 78%);
         }
 
         body{
@@ -44,20 +49,24 @@
             justify-content: space-between;
             border-radius: 10px;
             padding: 10px 15px;
-            background-color: var(--section1);
+            background-color: var(--background-color);
         }
 
         
         #logo{
             height: 30px;
-            color: #fff;
         }
 
-        #icon-sun{
+        #theme-icon{
+            background-image: var(--mode-image);
+            background-repeat: no-repeat;
+            background-size: cover;
+            cursor: pointer;
             height: 30px;
+            width: 30px;
         }
 
-        #icon-sun:focus{
+        #theme-icon:focus{
             border: 1px solid rgb(239, 67, 67);
         }
 
@@ -78,10 +87,10 @@
             border-radius: 15px;
             font-family: inherit;
             padding: 5px 10px;
-            background-color:  hsl(226, 25%, 17%);
+            background-color:  var(--background-color);
             border: none;
             cursor: pointer;
-            color: #fff;
+            color: var(--text-color);
             text-decoration: none;
         }
 
@@ -101,7 +110,7 @@
         .extension{
             border-radius: 8px;
             padding: 10px;
-            background-color: hsl(226, 25%, 17%);
+            background-color: var(--background-color);
             border: 0.5px solid hsl(226, 11%, 37%);
         }
 
@@ -121,7 +130,7 @@
 
         .extDes{
             font-size: 16px;
-            color:hsl(0, 0%, 78%);
+            color:var(--des-color);
         }
 
         
@@ -171,7 +180,7 @@
             border-radius: 15px;
             padding: 8px 10px;
             background: transparent;
-            color: #fff;
+            color: var(--des-color);
             cursor: pointer;
             border: 0.5px solid hsl(226, 11%, 37%);
         }
@@ -184,3 +193,14 @@
         .remove:hover{
         background-color: hsl(0, 84%, 60%);
      }
+
+
+
+
+
+
+
+
+
+
+     
