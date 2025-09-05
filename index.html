@@ -6,17 +6,36 @@
     <title>Browser Extension Manager</title>
    <link rel="stylesheet" href="style.css">
    <style>
+
+    :root{
+        --background-active: hsl(3, 77%, 44%);
+        --background-inactive:hsl(200, 60%, 99%);
+        --hover: hsl(0, 0%, 93%);
+        --color: hsl(200, 60%, 99%);
+    }
+
+    [data-theme="dark"]{
+        --background-active: hsl(3, 86%, 64%);
+        --background--inactive:hsl(225, 23%, 24%);
+        --hover:hsl(226, 11%, 37%);
+        --color:hsl(227, 75%, 14%);
+    }
+
      #all{
-        background-color: hsl(0, 84%, 60%);
-        color: black;
+        background-color: var(--background-active);
+        color: var(--color);
      }
 
      #all:hover{
-        background-color: hsl(0, 84%, 70%)
+        background-color: hsl(3, 71%, 56%);
+     }
+
+     #active, #inactive{
+        background-color: var(--background-inactive);
      }
 
      #active:hover, #inactive:hover{
-        background-color: hsl(226, 25%, 27%);
+        background-color: var(--hover);
      }
 
      
@@ -26,7 +45,7 @@
     <main class="main">
        <section class="section1">
             <img src="images/logo.svg" alt="" srcset="" id="logo">
-            <div id="theme-icon"></div>
+            <div id="theme-icon" tabindex="0"></div>
 
        </section>
 

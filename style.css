@@ -12,9 +12,11 @@
         :root{
             --body-background: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
             --text-color: #000;
-            --background-color: #fff;
+            --background-color: hsl(200, 60%, 99%);
             --mode-image: url('images/icon-moon.svg');
-            --des-color: hsl(226, 11%, 37%);
+            --des-color: hsl(225, 23%, 24%);
+            --border:hsl(0, 0%, 78%);
+            --toggle: hsl(3, 77%, 44%);
             
         }
 
@@ -24,6 +26,8 @@
             --background-color: hsl(226, 25%, 17%);
             --mode-image: url('images/icon-sun.svg');
             --des-color:hsl(0, 0%, 78%);
+            --border:hsl(226, 11%, 37%);
+            --toggle:hsl(3, 86%, 64%);
         }
 
         body{
@@ -67,7 +71,10 @@
         }
 
         #theme-icon:focus{
-            border: 1px solid rgb(239, 67, 67);
+            border: none;
+            background-color: var(--border);
+            outline: 2px solid var(--toggle);
+            outline-offset: 3px;
         }
 
 
@@ -80,7 +87,7 @@
 
         .capsules{
             display: flex;
-            gap: 5px;
+            gap: 10px;
         }
 
         .capsules a{
@@ -95,8 +102,9 @@
         }
 
         .capsules a:focus{
-            outline: none;
-            border: 2px solid rgb(239, 67, 67);
+            border: none;
+            outline: 2px solid var(--toggle);
+            outline-offset: 3px;
         }
 
 
@@ -111,7 +119,7 @@
             border-radius: 8px;
             padding: 10px;
             background-color: var(--background-color);
-            border: 0.5px solid hsl(226, 11%, 37%);
+            border: 0.5px solid var(--border);
         }
 
         .extension-logo{
@@ -146,7 +154,7 @@
             height: 15px;
             width: 30px;
             border-radius: 15px;
-            background-color: rgba(243, 78, 44, 0.867);
+            background-color: var(--toggle);
             cursor: pointer;
             display: flex;
             justify-content: flex-start;
@@ -158,7 +166,7 @@
             height: 15px;
             width: 30px;
             border-radius: 15px;
-            background-color:hsl(226, 11%, 37%);
+            background-color:hsl(0, 0%, 78%);
             cursor: pointer;
             display: flex;
             justify-content: flex-end;
@@ -185,13 +193,16 @@
             border: 0.5px solid hsl(226, 11%, 37%);
         }
 
-        .remove:focus{
-            outline: none;
-            border: 2px solid rgb(239, 67, 67);
+        .remove:focus{   
+            border: none;
+            background-color: var(--border);
+            outline: 2px solid var(--toggle);
+            outline-offset: 3px;
         }
 
         .remove:hover{
-        background-color: hsl(0, 84%, 60%);
+        background-color: var(--toggle);
+        color: var(--background-color);
      }
 
 
