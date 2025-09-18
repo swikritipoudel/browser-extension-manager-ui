@@ -10,7 +10,7 @@
     :root{
         --background-active: hsl(3, 77%, 44%);
         --background-inactive:hsl(200, 60%, 99%);
-        --hover: hsl(0, 0%, 93%);
+        --hover: hsl(226, 11%, 37%);
         --color: hsl(200, 60%, 99%);
     }
 
@@ -35,7 +35,7 @@
      }
 
      #active:hover, #inactive:hover{
-        background-color: var(--hover);
+        color: var(--hover);
      }
 
      
@@ -45,7 +45,9 @@
     <main class="main">
        <section class="section1">
             <img src="images/logo.svg" alt="" srcset="" id="logo">
-            <div id="theme-icon" tabindex="0"></div>
+            <div id="theme-icon-container" tabindex="0" >
+                <span id="theme-icon"></span>
+            </div>
 
        </section>
 
@@ -59,23 +61,7 @@
        </section>
 
        <section class="section3">
-           <!-- <div class="extension">
-            <div class="logo-description">
-            <img src="images/logo-devlens.svg" alt="dev lens" class="extension-logo">
-            <div class="text">
-            <p class="extName">DevLens</p> 
-            <p class="extDes">Quickly inspect page layouts and visualize element boundaries.</p>
-            </div>
-            </div>
-             <div class="buttons">
-                <button class="remove">Remove</button>
-                <div>
-                    <div class="circle">
-
-                    </div>
-                </div>
-            </div>
-        </div> -->
+          
     </section>
     </main>
 
@@ -115,6 +101,8 @@
             remove.classList.add("remove")
 
             let toggle = document.createElement("div")
+            toggle.setAttribute("tabindex", "0")
+            toggle.classList.add("toggle")
             if(element.isActive===true){
                 toggle.classList.add("toggle-on")
             }
@@ -146,6 +134,7 @@
 
     getAll()
 </script>
+<script src="script.js"></script>
 
 </body>
 

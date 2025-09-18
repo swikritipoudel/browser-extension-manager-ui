@@ -6,25 +6,46 @@
     <title>Browser Extension Manager</title>
    <link rel="stylesheet" href="style.css">
    <style>
-    #inactive{
-        background-color: rgb(239, 67, 67);
-         color: black;
+    :root{
+        --background-active: hsl(3, 77%, 44%);
+        --background-inactive:hsl(200, 60%, 99%);
+        --hover: hsl(226, 11%, 37%);
+        --color: hsl(200, 60%, 99%);
     }
 
-    #inactive:hover{
-        background-color: hsl(0, 84%, 70%)
+    [data-theme="dark"]{
+        --background-active: hsl(3, 86%, 64%);
+        --background--inactive:hsl(225, 23%, 24%);
+        --hover:hsl(226, 11%, 37%);
+        --color:hsl(227, 75%, 14%);
+    }
+
+     #inactive{
+        background-color: var(--background-active);
+        color: var(--color);
      }
 
-     #all:hover, #active:hover{
-        background-color: hsl(226, 25%, 27%);
+     #inactive:hover{
+        background-color: hsl(3, 71%, 56%);
      }
+
+     #active, #all{
+        background-color: var(--background-inactive);
+     }
+
+     #active:hover, #all:hover{
+        color: var(--hover);
+     }
+
    </style>
 </head>
 <body>
     <main class="main">
        <section class="section1">
             <img src="images/logo.svg" alt="" srcset="" id="logo">
-            <img src="images/icon-sun.svg" alt="dark mode" id="icon-sun">
+            <div id="theme-icon-container" tabindex="0" >
+                <span id="theme-icon"></span>
+            </div>
 
        </section>
 
@@ -95,6 +116,8 @@
             remove.classList.add("remove")
 
             let toggle = document.createElement("div")
+            toggle.setAttribute("tabindex", "0")
+            toggle.classList.add("toggle")
             toggle.classList.add("toggle-off")
            
 
@@ -121,7 +144,8 @@
     }
 
     getAll()
-    </script>    
+    </script> 
+    <script src="script.js"></script>   
 
 </body>
 </html>
