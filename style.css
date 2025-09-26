@@ -17,11 +17,16 @@
             --des-color: hsl(225, 23%, 24%);
             --border:hsl(0, 0%, 78%);
             --toggle: hsl(3, 77%, 44%);
+<<<<<<< HEAD
             --svg-fill:black;
             --icon-container:hsl(0, 0%, 93%);
             --icon-hover:hsl(0, 0%, 78%);
             
     }
+=======
+            
+        }
+>>>>>>> origin/main
 
         [data-theme="dark"]{
              --body-background: linear-gradient(180deg, #040918 0%, #091540 100%);
@@ -31,10 +36,13 @@
             --des-color:hsl(0, 0%, 78%);
             --border:hsl(226, 11%, 37%);
             --toggle:hsl(3, 86%, 64%);
+<<<<<<< HEAD
             --svg-fill:white;
             --icon-container:hsl(225, 23%, 24%);
             --icon-hover:hsl(226, 11%, 37%);
             
+=======
+>>>>>>> origin/main
         }
 
         body{
@@ -58,29 +66,45 @@
             width: 80%;
             display: flex;
             justify-content: space-between;
+<<<<<<< HEAD
             align-items: center;
+=======
+>>>>>>> origin/main
             border-radius: 10px;
             padding: 10px 15px;
             background-color: var(--background-color);
         }
 
         
+<<<<<<< HEAD
         #logo-name{
             fill: var(--svg-fill);
         }
 
         #logo-icon{
             fill: var(--toggle);
+=======
+        #logo{
+            height: 30px;
+>>>>>>> origin/main
         }
 
         #theme-icon-container{
             height: 30px;
             width: 30px;
+<<<<<<< HEAD
+=======
+            background-color: hsl(217, 61%, 90%);
+>>>>>>> origin/main
             border-radius: 5px;
             display: flex;
             justify-content: center;
             align-items: center;
+<<<<<<< HEAD
             background-color:var(--icon-container) ;
+=======
+            background-color: hsl(0, 0%, 93%);
+>>>>>>> origin/main
         }
 
         #theme-icon{
@@ -97,7 +121,11 @@
 
 
         #theme-icon-container:hover{
+<<<<<<< HEAD
             background-color: var(--icon-hover);
+=======
+            background-color: hsl(0, 0%, 78%);
+>>>>>>> origin/main
         }
 
         #theme-icon-container:focus{
